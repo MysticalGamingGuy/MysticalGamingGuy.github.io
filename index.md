@@ -96,7 +96,7 @@ dependencies {
 - Create a new Main Kotlin file in the kotlin folder
 - copy the code from https://www.lwjgl.org/guide into the Main file for a simple getting started boost (Intellij will want to convert to kotlin, accept that change.)
 - To Run it, click the kotlin logo that will appear next to the following function in the Kotlin file.
-```Kotlin
+```java
 companion object {
 
     @JvmStatic
