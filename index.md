@@ -15,12 +15,12 @@ If you are new to programming, i would recommend taking a beginners/Intermidiate
 OpenGL is an open source GPU specification maintained by the Kronos group as well as a graphics library written in **C** which features 
 
 > a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU) .
-> - [OpenGl - Wikipedia](https://en.wikipedia.org/wiki/OpenGL)
+> - [OpenGl ~ Wikipedia](https://en.wikipedia.org/wiki/OpenGL)
 
 Those astute amongst you may have realized that we will be using Kotlin while OpenGL is written is C. This will make interacting with OpenGL more complicated. Thankfully some very clever people decided to close this complexity gap with a Binding to the OpenGL library named LWJGL.  This allows us to use the advantages of a modern language like Kotlin without worrying as much about underling low level implementations.
 
 > a binding from a programming language to a library or operating system service is an application programming interface (API) providing glue code (Adaption between languages) to use that library or service in a given programming language
-> - [Language Binding Wikipedia](https://en.wikipedia.org/wiki/Language_binding)
+> - [Language Binding ~ Wikipedia](https://en.wikipedia.org/wiki/Language_binding)
 
 We will go into more detail about LWJGL Later.
 
@@ -51,9 +51,9 @@ This part will walk you through how to create a project that has all the technol
 #### Create a new Project
 - Install Java JDK 1.8
 - Create a new gradle project in intellij 
-- The following Screen-caps will help you through this process
+- The following Screen~caps will help you through this process
 - your GroupID, ArtifactID and Version should follow [this standard](https://maven.apache.org/guides/mini/guide-naming-conventions.html) Ex. me.blogtut, BlogTut, 1.0
-- Use auto-imports (it'll make it easier when importing the libraries we need)
+- Use auto~imports (it'll make it easier when importing the libraries we need)
 - Keep the Name the same and you may use any location you like (make sure to postfix it with your're project name)
 - Open **Build.gradle** (apply sugestions as prompted)
 - add the following configuration into the **Build.gradle** file in the newly created project. This was made from https://www.lwjgl.org/customize, feel free to create your own.
