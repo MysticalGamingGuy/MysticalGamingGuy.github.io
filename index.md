@@ -97,8 +97,13 @@ dependencies {
 - copy the code from https://www.lwjgl.org/guide into the Main file for a simple getting started boost (Intellij will want to convert to kotlin, accept that change.)
 - Click the kotlin logo next to the main function to start the program
 - If this is what you see, you have done everything corectally and are ready to continue onto the next tutorial.
-```java
-public static void main(String[] args){
-    System.out.println("hello world");
+```Kotlin
+companion object {
+
+    @JvmStatic
+    fun main(args: Array<String>) {
+        HelloWorld().run()
+    }
+
 }
 ```
