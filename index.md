@@ -58,11 +58,10 @@ When it comes to 3D programming and Interacting with the GPU, options are limite
 
 Technologies
 During this project we will The technologies we will be using include
-JVM & Kotlin
+# JVM & Kotlin
 Many of you might be familiar with Java, considering that it is the most popular1 java for some time now and are/were probably thought it in school. Kotlin probably isn’t as talked about. Kotlin is a new language 
-Gradle
-LWJGL
-Intellij Community
-
+# Gradle
+# LWJGL
+# Intellij Community
 
 1: https://www.tiobe.com/tiobe-index/
