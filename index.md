@@ -1,14 +1,10 @@
 # Welcome to The Lonely Tilde
+Welcome everyone to my blog, here I plan on diving into 3D programming on the JVM as well as potentially more topics in the future. These tutorials are for people who have intermediate experience with java and would like to apply their knowledge of programming with 3D. These posts assume no or limited knowledge of 3D and Graphics pipelines, and plan on providing a solid understanding for you to branch off from into whatever topics interest you.
 
-# Blog
-
-## Introduction & Setup with OpenGL on the JVM 
-
-## Introduction
-Welcome everyone to my blog, here I plan on diving into 3D programming on the JVM. These tutorials are for people who have intermediate experience with java and would like to apply their knowledge of programming with 3D. These posts assume no or limited knowledge of 3D and Graphics pipelines, and plan on providing a solid understanding for you to branch off from.
+# Understanding & Setup with **OpenGL** on the **JVM** 
 
 ## Who this is for?
-If you enjoy Math, low level programming and find joy in building systems from scratch without depending on other librabies as much, this is for you.
+If you enjoy Math, low level programming and find joy in building systems from scratch without depending as much on other librabies, this is for you. We use libraries here to ease the burden of using 3D on the JVM but we still are in control of major archtectural design.
 
 ## Who this isn’t for?
 If you are new to programming, i would recommend taking a beginners guide with Java in order to understand the concepts covered in these posts. If you want to make a game, this is not the best place to start. I would recommend trying unity or Game maker depending on what you feel comfortable with.
@@ -32,20 +28,24 @@ We will go into more detail about LWJGL Later.
 When it comes to 3D programming and Interacting with the GPU, options are limited. And considering OpenGL can operate on all major operating system as well as being relatively easy to get started, it’s a great choice to introduce you to the feild. 
 
 ## Technologies
-During this project we will The technologies we will be using include
+During this project we will be combining many technologies, here . I encourage you to reasearch and technology fucther if it is not clear from what i have said here. 
+The technologies we will be using include...
 
 ### JVM & Kotlin
-Many of you might be familiar with Java, considering that it is the most popular<sup>1</sup> java for some time now and are/were probably thought it in school. Kotlin probably isn’t as talked about. Kotlin is a new language
+Many of you might be familiar with Java, considering that it is the most popular<sup>1</sup> java for some time now and are/were probably thought it in school. Kotlin probably isn’t as talked about. Kotlin is a new language that aims to create a "better java". It quite modern and developed to get away for cumbersome java features which have been around since 1996. One reason that makes kotlin special is its interoperability with java, meaning kotlin can call java function as well as the reverse.
 
 ### Gradle
+Gradle is a build system that, for our purposes, will allow us to easily configure our project by managing our dependances and getting our dependancies remotely.
 
 ### LWJGL
-
+LWJGL (Light Weight Java Game Library) is a Java library primarily for enabling
+> cross-platform access to popular native APIs useful in the development of graphics (OpenGL)
+This is exacally what we need because of the aformenthioned reasons.
 
 ### Intellij Community
 Intellij is a modern and popular IDE for the JVM.
 
-##Setup
+## Setup
 ```java
 public static void main(String[] args){
     System.out.println("hello world");
