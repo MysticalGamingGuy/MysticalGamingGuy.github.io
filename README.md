@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Jekyll Cayman theme
 
 This is a [Jekyll][1] theme for [@jasonlong][2]'s [Cayman theme][4] on [GitHub Pages][3].
+=======
+[MysticalGamingGuy.github.io](http://MysticalGamingGuy.github.io)
+
+# Cayman theme
+>>>>>>> 73059d9f91bba5ed97289487fb60e57b73e78cc5
 
 Cayman is a clean, responsive theme for [GitHub Pages](https://pages.github.com). This theme is available as an option if you use the [Automatic Page Generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator/) or you can copy the template and styles to use on your own.
 
@@ -61,9 +67,14 @@ Your theme is setup just like a normal Jekyll site! To test your theme, run `bun
 
 # License
 
+<<<<<<< HEAD
 This work is licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
 
 [1]: https://jekyllrb.com/
 [2]: https://github.com/jasonlong
 [3]: https://pages.github.com/
 [4]: https://github.com/jasonlong/cayman-theme
+=======
+This work is licensed under a [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/) license.
+=======
+>>>>>>> 73059d9f91bba5ed97289487fb60e57b73e78cc5
