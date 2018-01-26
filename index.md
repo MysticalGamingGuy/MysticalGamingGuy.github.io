@@ -56,13 +56,12 @@ This part will walk you through how to create a project that has all the technol
 - Use auto-imports (it'll make it easier when importing the libraries we need)
 - Keep the Name the same and you may use any location you like (make sure to postfix it with your're project name)
 - Open **Build.gradle** (apply sugestions as prompted)
-- add the following configuration into the **Build.gradle** file in the newly created project.
-https://www.lwjgl.org/customize
+- add the following configuration into the **Build.gradle** file in the newly created project. This was made from https://www.lwjgl.org/customize, feel free to create your own.
 
 ```groovy
 import org.gradle.internal.os.OperatingSystem
 
-switch ( OperatingSystem.current() ) {
+switch ( OperatingSystem.current ) {
 	case OperatingSystem.WINDOWS:
 		project.ext.lwjglNatives = "natives-windows"
 		break
@@ -76,10 +75,6 @@ switch ( OperatingSystem.current() ) {
 
 project.ext.lwjglVersion = "3.1.5"
 project.ext.jomlVersion = "1.9.7"
-
-repositories {
-	mavenCentral()
-}
 
 dependencies {
 	compile "org.lwjgl:lwjgl:$lwjglVersion"
@@ -98,6 +93,10 @@ dependencies {
 }
 ```
 
+- Create a new Main Kotlin file in the kotlin folder
+- copy the code from https://www.lwjgl.org/guide into the Main file for a simple getting started boost (Intellij will want to convert to kotlin, accept that change.)
+- Click the kotlin logo next to the main function to start the program
+- If this is what you see, you have done everything corectally and are ready to continue onto the next tutorial.
 ```java
 public static void main(String[] args){
     System.out.println("hello world");
