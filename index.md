@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Welcome to The Lonely Tilde
 
 You can use the [editor on GitHub](https://github.com/MysticalGamingGuy/MysticalGamingGuy.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -64,4 +64,4 @@ Many of you might be familiar with Java, considering that it is the most popular
 # LWJGL
 # Intellij Community
 
-1: https://www.tiobe.com/tiobe-index/
+1: [https://www.tiobe.com/tiobe-index/](https://www.tiobe.com/tiobe-index/)
