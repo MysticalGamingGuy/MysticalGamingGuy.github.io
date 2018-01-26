@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+[MysticalGamingGuy.github.io](http://MysticalGamingGuy.github.io)
+
 # Cayman theme
 
 Cayman is a clean, responsive theme for [GitHub Pages](https://pages.github.com). This theme is available as an option if you use the [Automatic Page Generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator/) or you can copy the template and styles to use on your own.
@@ -19,5 +20,4 @@ If you'd like to use this theme with Jekyll, Pietro Menna has put together a pac
 
 This work is licensed under a [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/) license.
 =======
-# [MysticalGamingGuy.github.io](http://MysticalGamingGuy.github.io)
 >>>>>>> b4112c0711976c10aaf55bcc3a89452e62cf878f
