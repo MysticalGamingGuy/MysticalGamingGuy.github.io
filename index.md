@@ -32,7 +32,7 @@ This project is focusing around the 3D libraies but we will be combining many ot
 The technologies we will be using include...
 
 #### 1. JVM & Kotlin
-Many of you might be familiar with Java, considering that it is the [most popular](https://www.tiobe.com/tiobe-index/) java for some time now and are/were probably thought it in school. Kotlin probably isn’t as talked about. Kotlin is a new language that aims to create a "better java". It quite modern and developed to get away for cumbersome java features which have been around since 1996. One reason that makes kotlin special is its interoperability with java, meaning kotlin can call java function as well as the reverse.
+Many of you might be familiar with Java, considering that it is the [most popular](https://www.tiobe.com/tiobe-index/) java for some time now and are/were probably thought it in school. Kotlin probably isn’t as talked about. Kotlin is a new language that aims to create a "better java". It quite modern and developed to get away for cumbersome java features which have been around since 1996. One reason that makes kotlin special is its interoperability with java, meaning kotlin can call java function as well as the reverse. If feel more comfortable with java, all parts of this tutorial will be applicable to java.
 
 #### 2. Gradle
 Gradle is a build system that, for our purposes, will allow us to easily configure our project by managing our dependances as well as retreving them remotely.
@@ -94,7 +94,7 @@ dependencies {
 ```
 
 - Create a new Main Kotlin file in the kotlin folder
-- copy the code from https://www.lwjgl.org/guide into the Main file for a simple getting started boost (Intellij will want to convert to kotlin, accept that change.)
+- copy the [Getting Started Code](https://www.lwjgl.org/guide) into the Main file for a simple getting started boost (Intellij will want to convert it into kotlin, accept that change, as we are using kotlin.)
 - To Run it, click the kotlin logo that will appear next to the following function in the Kotlin file.
 
 ```java
@@ -108,5 +108,5 @@ companion object {
 }
 ```
 
-- If this is what you see, you have done everything corectally and are ready to continue onto the next tutorial.
+- If this is what you see, you have done everything corectally and are ready to continue onto the next tutorial. Congratulations!
 
