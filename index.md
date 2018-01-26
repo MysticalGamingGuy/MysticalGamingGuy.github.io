@@ -31,22 +31,22 @@ When it comes to 3D programming and Interacting with the GPU, options are limite
 This project is focusing around the 3D libraies but we will be combining many other technologies. I encourage you to reasearch and technology fucther if it is not clear from what i say here. 
 The technologies we will be using include...
 
-#### JVM & Kotlin
-Many of you might be familiar with Java, considering that it is the (most popular)[https://www.tiobe.com/tiobe-index/] java for some time now and are/were probably thought it in school. Kotlin probably isn’t as talked about. Kotlin is a new language that aims to create a "better java". It quite modern and developed to get away for cumbersome java features which have been around since 1996. One reason that makes kotlin special is its interoperability with java, meaning kotlin can call java function as well as the reverse.
+#### 1. JVM & Kotlin
+Many of you might be familiar with Java, considering that it is the [most popular](https://www.tiobe.com/tiobe-index/) java for some time now and are/were probably thought it in school. Kotlin probably isn’t as talked about. Kotlin is a new language that aims to create a "better java". It quite modern and developed to get away for cumbersome java features which have been around since 1996. One reason that makes kotlin special is its interoperability with java, meaning kotlin can call java function as well as the reverse.
 
-#### Gradle
+#### 2. Gradle
 Gradle is a build system that, for our purposes, will allow us to easily configure our project by managing our dependances as well as retreving them remotely.
 
-#### LWJGL
-(LWJGL)[https://www.lwjgl.org/] (Light Weight Java Game Library) is a Java library primarily for enabling
+#### 3. LWJGL
+[LWJGL](https://www.lwjgl.org/) (Light Weight Java Game Library) is a Java library primarily for enabling
 > cross-platform access to popular native APIs useful in the development of graphics (OpenGL)
 This is exacally what we need because of the aformenthioned reasons.
 
-#### Intellij Community
+#### 4. Intellij Community
 Intellij is a modern and popular IDE for the JVM. it's made by the company that created Kotlin, which gives it the advantage of having the best integrationg with Kotlin.
 
 ## Setup
-This part will walk you through how to create a project that has all the technologies we need to display a simple ("Hello World")[https://en.wikipedia.org/wiki/%22Hello,_World!%22_program] type application.
+This part will walk you through how to create a project that has all the technologies we need to display a simple ["Hello World"](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) type application.
 
 
 ```java
