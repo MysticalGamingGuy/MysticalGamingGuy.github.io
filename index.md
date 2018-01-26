@@ -1,10 +1,10 @@
 # Welcome to The Lonely Tilde
-Welcome everyone to my blog, here I plan on diving into 3D programming on the JVM as well as potentially more topics in the future. These tutorials are for people who have intermediate experience with java and would like to apply their knowledge of programming with 3D. These posts assume no or limited knowledge of 3D and Graphics pipelines, and plan on providing a solid understanding for you to branch off from into whatever topics interest you.
+Welcome everyone to my blog, here I plan on diving into 3D programming on the JVM as well as potentially more topics in the future. These tutorials are for people who have intermediate experience with java and would like to apply their knowledge of programming with 3D. These posts assume programming knowledge. thoses with litte to no knowledge of 3D and Graphics pipelines will benifit most from these. I plan on providing a solid understanding for you to branch off from into whatever topics interest you.
 
 # Understanding & Setup with **OpenGL** on the **JVM** 
 
 ## Who this is for?
-If you enjoy **Math**, **Low Level Programming** and find joy in building systems from scratch without depending as much on other librabies, this is for you. We use libraries here to ease the burden of using 3D on the JVM but we still are in control of major archtectural design.
+If you enjoy **Math**, **Low Level Programming** and find joy in building systems from **scratch** without depending as much on other librabies, this is for you. We use libraries here to ease the burden of using 3D on the JVM but we still are in control of major archtectural design.
 
 ## Who this isn’t for?
 If you are new to programming, i would recommend taking a beginners/Intermidiate guide with **Java** or **Kotlin** in order to understand the concepts covered in these posts. If you want to make a game, this is not the best place to start. I would recommend trying **Unity** or **Game Maker** depending on what you feel comfortable with and to understand what goes into a game engine/framework.
@@ -15,12 +15,12 @@ If you are new to programming, i would recommend taking a beginners/Intermidiate
 OpenGL is an open source GPU specification maintained by the Kronos group as well as a graphics library written in **C** which features 
 
 > a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU) .
-> - OpenGl, Wikipedia 
+> - [OpenGl - Wikipedia](https://en.wikipedia.org/wiki/OpenGL)
 
 Those astute amongst you may have realized that we will be using Kotlin while OpenGL is written is C. This will make interacting with OpenGL more complicated. Thankfully some very clever people decided to close this complexity gap with a Binding to the OpenGL library named LWJGL.  This allows us to use the advantages of a modern language like Kotlin without worrying as much about underling low level implementations.
 
 > a binding from a programming language to a library or operating system service is an application programming interface (API) providing glue code (Adaption between languages) to use that library or service in a given programming language
-> - Captain Janeway
+> - [Language Binding Wikipedia](https://en.wikipedia.org/wiki/Language_binding)
 
 We will go into more detail about LWJGL Later.
 
@@ -43,11 +43,60 @@ Gradle is a build system that, for our purposes, will allow us to easily configu
 This is exacally what we need because of the aformenthioned reasons.
 
 #### 4. Intellij Community
-Intellij is a modern and popular IDE for the JVM. it's made by the company that created Kotlin, which gives it the advantage of having the best integrationg with Kotlin.
+Intellij is a modern and popular IDE for the JVM. it's made by the company that created Kotlin, which gives it the advantage of having the best integrationg with Kotlin. I would recomend understanding the software beforehand as i will 
 
 ## Setup
 This part will walk you through how to create a project that has all the technologies we need to display a simple ["Hello World"](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) type application.
 
+#### Create a new Project
+- Install Java JDK 1.8
+- Create a new gradle project in intellij 
+- The following Screen-caps will help you through this process
+- your GroupID, ArtifactID and Version should follow [this standard](https://maven.apache.org/guides/mini/guide-naming-conventions.html) Ex. me.blogtut, BlogTut, 1.0
+- Use auto-imports (it'll make it easier when importing the libraries we need)
+- Keep the Name the same and you may use any location you like (make sure to postfix it with your're project name)
+- Open **Build.gradle** (apply sugestions as prompted)
+- add the following configuration into the **Build.gradle** file in the newly created project.
+https://www.lwjgl.org/customize
+
+```groovy
+import org.gradle.internal.os.OperatingSystem
+
+switch ( OperatingSystem.current() ) {
+	case OperatingSystem.WINDOWS:
+		project.ext.lwjglNatives = "natives-windows"
+		break
+	case OperatingSystem.LINUX:
+		project.ext.lwjglNatives = "natives-linux"
+	break
+	case OperatingSystem.MAC_OS:
+		project.ext.lwjglNatives = "natives-macos"
+		break
+}
+
+project.ext.lwjglVersion = "3.1.5"
+project.ext.jomlVersion = "1.9.7"
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile "org.lwjgl:lwjgl:$lwjglVersion"
+	compile "org.lwjgl:lwjgl-assimp:$lwjglVersion"
+	compile "org.lwjgl:lwjgl-glfw:$lwjglVersion"
+	compile "org.lwjgl:lwjgl-openal:$lwjglVersion"
+	compile "org.lwjgl:lwjgl-opengl:$lwjglVersion"
+	compile "org.lwjgl:lwjgl-stb:$lwjglVersion"
+	compile "org.lwjgl:lwjgl:$lwjglVersion:$lwjglNatives"
+	compile "org.lwjgl:lwjgl-assimp:$lwjglVersion:$lwjglNatives"
+	compile "org.lwjgl:lwjgl-glfw:$lwjglVersion:$lwjglNatives"
+	compile "org.lwjgl:lwjgl-openal:$lwjglVersion:$lwjglNatives"
+	compile "org.lwjgl:lwjgl-opengl:$lwjglVersion:$lwjglNatives"
+	compile "org.lwjgl:lwjgl-stb:$lwjglVersion:$lwjglNatives"
+	compile "org.joml:joml:${jomlVersion}"
+}
+```
 
 ```java
 public static void main(String[] args){
