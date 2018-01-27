@@ -51,14 +51,16 @@ This part will walk you through how to create a project that has all the technol
 #### Create a new Project
 - Install Java JDK 1.8
 - Create a new gradle project in intellij, The following Screen~caps will help you through this process
+
 ![Create Button in Intellij](https://i.imgur.com/PoCX54O.png)
 ![Project Settings](https://i.imgur.com/ZQOZFZL.png)
+
 - your GroupID, ArtifactID and Version should follow [this standard](https://maven.apache.org/guides/mini/guide-naming-conventions.html) Ex. me.blogtut, BlogTut, 1.0
 - Use auto~imports (it'll make it easier when importing the libraries we need)
 - Keep the Name the same and you may use any location you like (make sure to postfix it with your're project name)
-- Open **Build.gradle** (apply sugestions as prompted)
+- Open `build.gradle` (apply sugestions as prompted)
 ![Suggestion](https://i.imgur.com/k61yTZn.png)
-- add the following configuration into the **Build.gradle** file in the newly created project. This was made by [LWJGL Customizer](https://www.lwjgl.org/customize), feel free to create your own.
+- add the following configuration into the `build.gradle` file in the newly created project. This was made by [LWJGL Customizer](https://www.lwjgl.org/customize), feel free to create your own.
 
 ```groovy
 import org.gradle.internal.os.OperatingSystem
