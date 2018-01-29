@@ -1,3 +1,8 @@
+---
+layout: default
+comments: true
+---
+
 # Welcome to The Lonely Tilde
 Welcome everyone to my blog, here I plan on diving into 3D programming on the JVM as well as potentially more topics in the future. These tutorials are for people who have intermediate experience with java and would like to apply their knowledge of programming with 3D. These posts assume programming knowledge. thoses with litte to no knowledge of 3D and Graphics pipelines will benifit most from these. I plan on providing a solid understanding for you to branch off from into whatever topics interest you.
 
@@ -114,6 +119,32 @@ companion object {
 }
 ```
 
-![Suggestion](https://i.imgur.com/3iJ1lOm.png)
+![Result](https://i.imgur.com/3iJ1lOm.png)
 
 - If this is what you see, you have done everything corectally and are ready to continue onto the next tutorial. Congratulations!
+
+{% if page.comments %}
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = 'http://thelonelytilde.tk/';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'blog1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://thelonelytilde.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+{% endif %}
+
