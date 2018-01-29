@@ -1,3 +1,8 @@
+---
+layout: default
+comments: true
+---
+
 [Back](index)
 
 ## Understanding & Setup with **OpenGL** on the **JVM** 

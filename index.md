@@ -1,6 +1,6 @@
 ---
 layout: default
-comments: true
+comments: false
 ---
 
 # Welcome to The Lonely Tilde
