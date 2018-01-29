@@ -1,3 +1,8 @@
+---
+layout: default
+comments: true
+---
+
 # Welcome to The Lonely Tilde
 Welcome everyone to my blog, here I plan on diving into 3D programming on the JVM as well as potentially more topics in the future. These tutorials are for people who have intermediate experience with java and would like to apply their knowledge of programming with 3D. These posts assume programming knowledge. thoses with litte to no knowledge of 3D and Graphics pipelines will benifit most from these. I plan on providing a solid understanding for you to branch off from into whatever topics interest you.
 
