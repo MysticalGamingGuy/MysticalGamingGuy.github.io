@@ -12,7 +12,7 @@ Welcome everyone to my blog, here I plan on diving into 3D programming on the JV
 If you enjoy **Math**, **Low Level Programming** and find joy in building systems from **scratch** without depending as much on other libraries, this is for you. We use libraries here to ease the burden of using 3D on the JVM but we still are in control of major architectural design.
 
 ## Who this isn’t for?
-If you are new to programming, I would recommend taking a beginners/Intermediate guide with **Java** or **Kotlin** in order to understand the concepts covered in these posts. If you want to make a game, this is not the best place to start. I would recommend trying **Unity** or **Game Maker** depending on what you feel comfortable with and to understand what goes into a game engine/framework.
+If you are new to programming, I would recommend taking a beginner/Intermediate guide with **Java** or **Kotlin** in order to understand the concepts covered in these posts. If you want to make a game, this is not the best place to start. I would recommend trying **Unity** or **Game Maker** depending on what you feel comfortable with and to understand what goes into a game engine/framework.
 
 # OpenGL
 
@@ -40,7 +40,7 @@ The technologies we will be using include...
 Many of you might be familiar with Java, considering that it is the [most popular](https://www.tiobe.com/tiobe-index/) java for some time now and are/were probably thought it in school. Kotlin probably isn’t as talked about. Kotlin is a new language that aims to create a "better java". It quite modern and developed to get away for cumbersome java features which have been around since 1996. One reason that makes Kotlin special is its interoperability with java, meaning Kotlin can call java function as well as the reverse. If feel more comfortable with java, all parts of this tutorial will be applicable to java.
 
 #### 2. Gradle
-Gradle is a build system that, for our purposes, will allow us to easily configure our project by managing our dependences as well as retrieving them remotely.
+Gradle is a build system that, for our purposes, will allow us to easily configure our project by managing our dependencies as well as retrieving them remotely.
 
 #### 3. LWJGL
 [LWJGL](https://www.lwjgl.org/) (Light Weight Java Game Library) is a Java library primarily for enabling
