@@ -11,9 +11,7 @@ Hello, My name is Ian Moody and Welcome to my blog. On here I will be diving int
 ## Who This Is For?
 If you just want to make a game, this is not the best place to start as that is not the end goal here. I would recommend trying **Unity** or **Game Maker** depending on what you feel comfortable with and to understand what goes into a game engine/framework. With that being said, If you enjoy **Math**, **Low Level Programming** and find joy in building systems from **scratch** without depending as much on other libraries, you're in the right place. I'll be using libraries here to ease the burden of using 3D on the JVM (Kotlin in Specific). This still leaves us in control of major architectural designs. 
 These tutorials are for people who have Fundamentail programming skills and would like to apply their knowledge of programming to produce stunning (In my oppinion) 3d visuals. Throughout these posts, i will be assuming a certain degree of programming proficiency, so if you're not sure if you have what it takes, a good benchmark to see if you'll be ready for this is weather you can sit down and program a game of [Pong](https://en.wikipedia.org/wiki/Pong). If not, I might recommend taking a beginner/Intermediate tutorial in either **Java** and/or **Kotlin** in order to understand the concepts covered in these posts. Those with little to no knowledge of 3D and Graphics pipelines will benefit most from these as this will be the main focus of learning. By the end I plan to have provided a baseline understanding of 3D programming from which you can branch off into whatever topics you fancy.  
-
 # OpenGL
-
 ## What
 OpenGL is an open source GPU specification maintained by the Kronos group as well as a graphics library written in **C**. It features... 
 
