@@ -103,7 +103,7 @@ dependencies {
 - Copy the [Getting Started Code](https://www.lwjgl.org/guide) into the Main file for a simple getting started demonstration (Intellij will want to convert it into Kotlin, accept that change, as we are using Kotlin.)
 - To run it, click the Kotlin logo that will appear to the left of the following function in the `Main` file.
 
-```java
+```kotlin
 companion object {
 
     @JvmStatic
