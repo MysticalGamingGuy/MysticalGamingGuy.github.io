@@ -6,10 +6,25 @@ comments: true
 [Back](index)
 
 ## GLFW
-[GLFW](http://www.glfw.org/) is what we will be using for windowing our application. It's a cross platform library that can run on windows, linux, mac and more
+[GLFW](http://www.glfw.org/) is what we will be using for windowing our application. It's a cross platform library that can run on windows, linux, mac and more. This is the best option as the binding are provided by LWJGL and are recommended by the developers. Its main purpose is to display OpenGL content and handle events such as window manipulation and HCI input.
 
 ## VAO, VBO, EBO
-These 3 concepts and there connections are what drives data in the OpenGL pipeline.
+These 3 Objects and their connections are what drives data in the OpenGL pipeline. Here i'll cover each one, explaining their purpose.
+
+### Vertex Buffer Object (VBO)
+the VBO is a custom defined array of elements that can contain data such as 
+- Vertex Positions
+- Texture Coordinates
+- Normals
+- Colour Data
+
+They can be created with the following OpenGL calls
+
+```kotlin
+val vbo = glGenBuffers()
+glBindBuffer(GL_ARRAY_BUFFER, vbo)
+glBufferData(GL_ARRAY_BUFFER,vertices, GL_STATIC_DRAW)
+```
 
 ### Vertex Array Object (VAO)
 These objects contain
@@ -21,6 +36,8 @@ Attribute pointers are used to define ranges of data stored in a VBO
 
 ![Attribute Pointer](https://learnopengl.com/img/getting-started/vertex_attribute_pointer_interleaved.png)
 
+Here is an example of 2 attribute pointers that are setup to conform to the above diagram. 
+
 ```kotlin
 int stride = 6 * Float.BYTES;
 glVertexAttribPointer(0, 3, GL_FLOAT, false, stride, 0);
@@ -29,48 +46,49 @@ glEnableVertexAttribArray(0);
 glEnableVertexAttribArray(1);
 ```
 
-### Vertex Buffer Object (VBO)
-the VBO is a custom defined array of elements that can contain data such as 
-- Vertex Positions
-- Texture Coordinates
-- Normals
-- Colour Data
-
-```kotlin
-val vbo = glGenBuffers()
-glBindBuffer(GL_ARRAY_BUFFER, vbo)
-glBufferData(GL_ARRAY_BUFFER,vertices, GL_STATIC_DRAW)
-```
-
 ### Element Buffer Object (EBO)
-The EBO is used for defining multiple uses of a single vertices.
+The EBO is used for defining multiple uses of single vertices.
 
-in a shape where a vertex is used in multiple triangles, we can define where it is used.
+in a shape where a vertex is used in multiple triangles, we can define where it is used and how many times.
 
 Take for example the rectangle with vertices 0-5
 ![Rectangle](https://vulkan-tutorial.com/images/vertex_vs_index.svg)
 
-without the EBO, we would need to define 6 vertices, 3 for each triangle. but with the EBO, we can define 4 vertices as well as a list defining the order in which the triangles are assembled. While this reduces the amount of repetitive data, it also makes it harder to define texture coordinates, which you can see occurring in the example code.
+without the EBO, we would need to define 6 vertices, 3 for each triangle. but with the EBO, we can define 4 vertices as well as a list defining the order in which the triangles will be drawn. While this reduces the amount of repetitive data, it also makes it harder to define texture coordinates, which you can see occurring in my example code.
 
 ## Drawing
-Once everything has been setup with a prior objects, we can actually draw them
+Once everything has been setup with a prior objects, we can draw them using the following methods depending on the usage of an EBO
 
 Using an EBO
 ```kotlin
 glDrawElements(GL_TRIANGLES,count, GL_UNSIGNED_INT,offset)
 ```
 
-And without
+Without an EBO
 ```kotlin
 glDrawArrays(GL_TRIANGLES,startingIndex,StoppingIndex);
 ```
 
 ## Shaders
-Shaders are C-like programs that 
-In & Out variables
-Uniforms variables
+Shaders are C-like programs that are used in the OpenGL pipeline
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/OpenGL_Tutorial_Triangle_no-fade_version.png" width="200">
+![OpenGL Pipeline](https://open.gl/media/img/c2_pipeline.png)
+
+In the example code below, we can see a functional vertex shader. Important features of there programs include:
+
+In & Out variables
+: For passing variables through the pipeline. (From one and into the next)
+
+Uniforms variables
+: Constant variables that are set programmatically before a run of the cycle and can be access by any shader.
+
+a float Uniform for example can be set with the following code
+```kotlin
+glUniform1f(getUniform(uniformName),value)
+```
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/OpenGL_Tutorial_Triangle_no-fade_version.png" width="250">
 
 ```glsl
 #version 330 core
@@ -84,25 +102,23 @@ uniform mat4 projection;
 
 void main(){
 
-gl_Position
-= projection * model * vec4(aPos, 1.0);
+gl_Position = projection * model * vec4(aPos, 1.0);
 texCord = aTexCord;
 }
 ```
 
-Setting Uniforms
-
-```kotlin
-glUniform1f(getUniform(uniformName),value)
-```
-
 ## Textures
+
+We can use textures to apply color data to individual pixels baced on an image file.
+in a VBO, we can add texture coordinate data. this will consist of X & Y values between 0-1 inclusive. textures in OpenGL have 0,0 in the bottom left and 1,1 in the top right. once each vertex knows its position in regards to the texture, all the pixels between the vertices have their color determined through [interpolation](https://en.wikipedia.org/wiki/Interpolation). 
 
 ![Textured Triangle](https://i.imgur.com/lSjgHPI.png)
 
 ## Normals 
 
-Normals are directional vectors that face perpendicular to a face (a triangle). they are used in *Lighting* and *Physics* calculation and their data is typically stored in the vbo along the other vertex data.
+Normals are directional vectors that face perpendicular to a face (a triangle). they are used in **Lighting** and **Physics** calculation and their data is typically stored in the vbo along the other vertex data.
+
+![Normal Cube](http://3.bp.blogspot.com/-hvsZGGjOsWs/T56u47bcImI/AAAAAAAAAJ4/thcV7nFyHVQ/s1600/cubeSurfaceNormals.jpg)
 
 ## Lighting
 
