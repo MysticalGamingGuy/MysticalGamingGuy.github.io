@@ -9,8 +9,25 @@ comments: true
 [GLFW](http://www.glfw.org/) is what we will be using for windowing our application. It's a cross platform library that can run on windows, linux, mac and more
 
 ## VAO, VBO, EBO
+These 3 concepts and there connections are what drives data in the OpenGL pipeline.
 
 ### Vertex Array Object (VAO)
+These objects contain
+- Attribute Pointers
+- VBOs
+- EBOs
+
+Attribute pointers are used to define ranges of data stored in a VBO
+
+![Attribute Pointer](https://learnopengl.com/img/getting-started/vertex_attribute_pointer_interleaved.png)
+
+```kotlin
+int stride = 6 * Float.BYTES;
+glVertexAttribPointer(0, 3, GL_FLOAT, false, stride, 0);
+glVertexAttribPointer(1, 3, GL_FLOAT, false, stride, 3*Float.BYTES);
+glEnableVertexAttribArray(0);
+glEnableVertexAttribArray(1);
+```
 
 ### Vertex Buffer Object (VBO)
 the VBO is a custom defined array of elements that can contain data such as 
@@ -48,20 +65,68 @@ And without
 glDrawArrays(GL_TRIANGLES,startingIndex,StoppingIndex);
 ```
 
-
 ## Shaders
+Shaders are C-like programs that 
+In & Out variables
+Uniforms variables
+
+![Shader Triangle](https://upload.wikimedia.org/wikipedia/commons/3/39/OpenGL_Tutorial_Triangle_no-fade_version.png)
+
+```glsl
+#version 330 core
+layout (location = 0) in vec3 aPos;
+layout (location = 1) in vec2 aTexCord;
+
+out vec2 texCord;
+
+uniform mat4 model;
+uniform mat4 projection;
+
+void main(){
+
+gl_Position
+= projection * model * vec4(aPos, 1.0);
+texCord = aTexCord;
+}
+```
+
+Setting Uniforms
+
+```kotlin
+glUniform1f(getUniform(uniformName),value)
+```
 
 ## Textures
 
+![Textured Triangle](https://i.imgur.com/lSjgHPI.png)
+
 ## Normals 
+
+Normals are directional vectors that face perpendicular to a face (a triangle). they are used in *Lighting* and *Physics* calculation and their data is typically stored in the vbo along the other vertex data.
 
 ## Lighting
 
+calculating realistic lighting would involve sending millions of rays from a light source and seeing how they propagate throughout an area. This is why we use lighting models to approximate how lighting looks in a scene. The Phong model is popular because of its fast execution and realistic looking results. The effect comes from the combination of different lighting effects:
+
+- Ambient
+- Diffuse
+- Specular
+
+These effects are calculated by looking at the relationships between...
+
+- The vector from the camera to a pixel
+- the vector from the pixel to the light source
+- the normal vector
+
+![Phone lighting](https://upload.wikimedia.org/wikipedia/commons/6/6b/Phong_components_version_4.png)
+
 ## Mapping
+Maps are simply textures that can be used to add additional data to triangles other than just colors. 
 
-
+![Maps](http://www.asilefx.net/catalog/images/products/txt_bark2/map_types.jpg)
 
 # Conclusion 
+With these topics understood we can begin to bring all the ideas to create something of interest.
 These concepts can be seen in action by cloning and running [My Project](https://github.com/MysticalGamingGuy/TheLonelyTildeOpenGL). which will be the same one i will be discussing how to create in my next blog post.
 
 <!--Discus-->
