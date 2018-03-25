@@ -3,7 +3,26 @@ layout: default
 comments: true
 ---
 
-##Title
+[Back](index)
+
+# OpenGL Framework Development
+As a reference, all the code discussed here can be found on my [Github Repository](https://github.com/MysticalGamingGuy/TheLonelyTildeOpenGL),
+
+## The Framework
+In this tutorial we will be building a framework for OpenGL so we can easily create windows with objects that have different textures and shaders. while there is many ways to approach such a framework, we will take a stance that parallels OpenGLs design philosophy.
+
+### Main
+Main will be our point of testing where we can assemble all the classes we've created and compose an actual scene. With the way we'll be structuring our program
+
+### Window
+This window class will be very similar to the starting code used in part one, this is because that code was mostly for creating the window. All we need to do is add some helper constructors and methods to allow public usage of it. We will be designing our Window to be responsible for holding the camera, the objects in our world and controlling our running loop. while this solution may be seem as a naive approach for larger engines, this works fine for the scale we're dealing with.
+
+
+### Texture
+### Camera
+### Shader
+### Shape
+
 
 
 
