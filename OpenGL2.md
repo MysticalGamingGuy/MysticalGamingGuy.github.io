@@ -5,26 +5,64 @@ comments: true
 
 [Back](index)
 
-# OpenGL Framework Development
-As a reference, all the code discussed here can be found on my [Github Repository](https://github.com/MysticalGamingGuy/TheLonelyTildeOpenGL),
+## GLFW
+[GLFW](http://www.glfw.org/) is what we will be using for windowing our application. It's a cross platform library that can run on windows, linux, mac and more
 
-## The Framework
-In this tutorial we will be building a framework for OpenGL so we can easily create windows with objects that have different textures and shaders. while there is many ways to approach such a framework, we will take a stance that parallels OpenGLs design philosophy.
+## VAO, VBO, EBO
 
-### Main
-Main will be our point of testing where we can assemble all the classes we've created and compose an actual scene. With the way we'll be structuring our program
+### Vertex Array Object (VAO)
 
-### Window
-This window class will be very similar to the starting code used in part one, this is because that code was mostly for creating the window. All we need to do is add some helper constructors and methods to allow public usage of it. We will be designing our Window to be responsible for holding the camera, the objects in our world and controlling our running loop. while this solution may be seem as a naive approach for larger engines, this works fine for the scale we're dealing with.
+### Vertex Buffer Object (VBO)
+the VBO is a custom defined array of elements that can contain data such as 
+- Vertex Positions
+- Texture Coordinates
+- Normals
+- Colour Data
+
+```kotlin
+val vbo = glGenBuffers()
+glBindBuffer(GL_ARRAY_BUFFER, vbo)
+glBufferData(GL_ARRAY_BUFFER,vertices, GL_STATIC_DRAW)
+```
+
+### Element Buffer Object (EBO)
+The EBO is used for defining multiple uses of a single vertices.
+
+in a shape where a vertex is used in multiple triangles, we can define where it is used.
+
+Take for example the rectangle with vertices 0-5
+![Rectangle](https://vulkan-tutorial.com/images/vertex_vs_index.svg)
+
+without the EBO, we would need to define 6 vertices, 3 for each triangle. but with the EBO, we can define 4 vertices as well as a list defining the order in which the triangles are assembled. While this reduces the amount of repetitive data, it also makes it harder to define texture coordinates, which you can see occurring in the example code.
+
+## Drawing
+Once everything has been setup with a prior objects, we can actually draw them
+
+Using an EBO
+```kotlin
+glDrawElements(GL_TRIANGLES,count, GL_UNSIGNED_INT,offset)
+```
+
+And without
+```kotlin
+glDrawArrays(GL_TRIANGLES,startingIndex,StoppingIndex);
+```
 
 
-### Texture
-### Camera
-### Shader
-### Shape
+## Shaders
+
+## Textures
+
+## Normals 
+
+## Lighting
+
+## Mapping
 
 
 
+# Conclusion 
+These concepts can be seen in action by cloning and running [My Project](https://github.com/MysticalGamingGuy/TheLonelyTildeOpenGL). which will be the same one i will be discussing how to create in my next blog post.
 
 <!--Discus-->
 {% if page.comments %}
