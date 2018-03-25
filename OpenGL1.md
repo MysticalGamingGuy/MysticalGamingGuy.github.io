@@ -118,6 +118,7 @@ companion object {
 
 If this is what you see, you have done everything correctly and are ready to continue onto the next tutorial. Congratulations! If not, no worries! My code can be found [here](https://github.com/MysticalGamingGuy/TheLonelyTildeOpenGL) for reference.
 
+<!--Discus-->
 {% if page.comments %}
 
 <div id="disqus_thread"></div>
