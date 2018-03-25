@@ -70,7 +70,7 @@ Shaders are C-like programs that
 In & Out variables
 Uniforms variables
 
-![Shader Triangle](https://upload.wikimedia.org/wikipedia/commons/3/39/OpenGL_Tutorial_Triangle_no-fade_version.png)
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/39/OpenGL_Tutorial_Triangle_no-fade_version.png" width="200">
 
 ```glsl
 #version 330 core
