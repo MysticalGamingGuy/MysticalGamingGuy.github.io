@@ -15,7 +15,7 @@ comments: true
 These 3 Objects and their connections are what drives data in the OpenGL pipeline. Here I'll cover each one, explaining their purpose.
 
 ### Vertex Buffer Object (VBO)
-The VBO is a custom defined array of elements that can contain data such as 
+The VBO is a custom defined array of elements that can contain data such as:
 - Vertex Positions
 - Texture Coordinates
 - Normals
@@ -30,7 +30,7 @@ glBufferData(GL_ARRAY_BUFFER,vertices, GL_STATIC_DRAW)
 ```
 
 ### Vertex Array Object (VAO)
-These objects contain
+These objects contain:
 - Attribute Pointers
 - VBOs
 - EBOs
@@ -57,7 +57,7 @@ In a shape where a vertex is used in multiple triangles, we can define where it 
 Take for example the rectangle with vertices 0-5
 ![Rectangle](https://vulkan-tutorial.com/images/vertex_vs_index.svg)
 
-Without the EBO, we would need to define 6 vertices, 3 for each triangle. but with the EBO, we can define 4 vertices as well as a list defining the order in which the triangles will be drawn. While this reduces the amount of repetitive data, it also makes it harder to define texture coordinates, which you can see occurring in my example code.
+Without the EBO, we would need to define 6 vertices, 3 for each triangle. But with the EBO, we can define 4 vertices as well as a list defining the order in which the triangles will be drawn. While this reduces the amount of repetitive data, it also makes it harder to define texture coordinates, which you can see occurring in my example code.
 
 ## Drawing
 Once everything has been setup with the prior objects, we can draw them using the following methods depending on the usage of an EBO
@@ -112,26 +112,26 @@ texCord = aTexCord;
 
 ## Textures
 
-We can use textures to apply color data to individual pixels baced on an image file.
-in a VBO, we can add texture coordinate data. this will consist of X & Y values between 0-1 inclusive. textures in OpenGL have 0,0 in the bottom left and 1,1 in the top right. once each vertex knows its position in regards to the texture, all the pixels between the vertices have their color determined through [interpolation](https://en.wikipedia.org/wiki/Interpolation). 
+We can use textures to apply color data to individual pixels based on an image file.
+In a VBO, we can add texture coordinate data. This will consist of X & Y values between 0-1 inclusive. Textures in OpenGL have 0,0 in the bottom left and 1,1 in the top right. Once each vertex knows its position in regards to the texture, all the pixels between the vertices have their color determined through [interpolation](https://en.wikipedia.org/wiki/Interpolation), which is done automatically by OpenGL.
 
 ![Textured Triangle](https://i.imgur.com/lSjgHPI.png)
 
 ## Normals 
 
-Normals are directional vectors that face perpendicular to a face (a triangle). they are used in **Lighting** and **Physics** calculation and their data is typically stored in the vbo along the other vertex data.
+Normals are directional vectors that face perpendicular to a face (a triangle). They are used in **Lighting** and **Physics** calculation and their data is typically stored in the VBO along the other vertex data.
 
 ![Normal Cube](http://3.bp.blogspot.com/-hvsZGGjOsWs/T56u47bcImI/AAAAAAAAAJ4/thcV7nFyHVQ/s1600/cubeSurfaceNormals.jpg)
 
 ## Lighting
 
-calculating realistic lighting would involve sending millions of rays from a light source and seeing how they propagate throughout an area. This is why we use lighting models to approximate how lighting looks in a scene. The Phong model is popular because of its fast execution and realistic looking results. The effect comes from the combination of different lighting effects:
+Calculating realistic lighting would involve sending millions of rays from a light source and seeing how they propagate throughout an area. This is why we use lighting models to approximate how lighting looks in a scene. The Phong model is popular because of its fast execution and realistic looking results. The effect comes from the combination of different lighting effects:
 
 - Ambient
 - Diffuse
 - Specular
 
-These effects are calculated by looking at the relationships between...
+These effects are calculated by looking at the relationships between:
 
 - The vector from the camera to a pixel
 - the vector from the pixel to the light source
@@ -140,13 +140,13 @@ These effects are calculated by looking at the relationships between...
 ![Phone lighting](https://upload.wikimedia.org/wikipedia/commons/6/6b/Phong_components_version_4.png)
 
 ## Mapping
-Maps are simply textures that can be used to add additional data to triangles other than just colors. 
+Maps are simply textures that can be used to add additional data to triangles rather than just colors. 
 
 ![Maps](http://www.asilefx.net/catalog/images/products/txt_bark2/map_types.jpg)
 
 # Conclusion 
 With these topics understood we can begin to bring all the ideas to create something of interest.
-These concepts can be seen in action by cloning and running [My Project](https://github.com/MysticalGamingGuy/TheLonelyTildeOpenGL). which will be the same one i will be discussing how to create in my next blog post.
+These concepts can be seen in action by cloning and running [My Project](https://github.com/MysticalGamingGuy/TheLonelyTildeOpenGL). Which will be the same one I will be explaining how to create in my next blog post.
 
 <!--Discus-->
 {% if page.comments %}
