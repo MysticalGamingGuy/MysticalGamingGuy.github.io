@@ -5,14 +5,17 @@ comments: true
 
 [Back](index)
 
+# Introduction
+<!-- TODO -->
+
 ## GLFW
-[GLFW](http://www.glfw.org/) is what we will be using for windowing our application. It's a cross platform library that can run on windows, linux, mac and more. This is the best option as the binding are provided by LWJGL and are recommended by the developers. Its main purpose is to display OpenGL content and handle events such as window manipulation and HCI input.
+[GLFW](http://www.glfw.org/) is what we will be using for windowing our application. It's a cross platform library that can run on windows, linux, mac and more. This is the best option as the bindings are provided by LWJGL and are recommended by the developers. Its main purpose is to display OpenGL content and handle events such as window manipulation and HCI input.
 
 ## VAO, VBO, EBO
-These 3 Objects and their connections are what drives data in the OpenGL pipeline. Here i'll cover each one, explaining their purpose.
+These 3 Objects and their connections are what drives data in the OpenGL pipeline. Here I'll cover each one, explaining their purpose.
 
 ### Vertex Buffer Object (VBO)
-the VBO is a custom defined array of elements that can contain data such as 
+The VBO is a custom defined array of elements that can contain data such as 
 - Vertex Positions
 - Texture Coordinates
 - Normals
@@ -49,15 +52,15 @@ glEnableVertexAttribArray(1);
 ### Element Buffer Object (EBO)
 The EBO is used for defining multiple uses of single vertices.
 
-in a shape where a vertex is used in multiple triangles, we can define where it is used and how many times.
+In a shape where a vertex is used in multiple triangles, we can define where it is used and how many times.
 
 Take for example the rectangle with vertices 0-5
 ![Rectangle](https://vulkan-tutorial.com/images/vertex_vs_index.svg)
 
-without the EBO, we would need to define 6 vertices, 3 for each triangle. but with the EBO, we can define 4 vertices as well as a list defining the order in which the triangles will be drawn. While this reduces the amount of repetitive data, it also makes it harder to define texture coordinates, which you can see occurring in my example code.
+Without the EBO, we would need to define 6 vertices, 3 for each triangle. but with the EBO, we can define 4 vertices as well as a list defining the order in which the triangles will be drawn. While this reduces the amount of repetitive data, it also makes it harder to define texture coordinates, which you can see occurring in my example code.
 
 ## Drawing
-Once everything has been setup with a prior objects, we can draw them using the following methods depending on the usage of an EBO
+Once everything has been setup with the prior objects, we can draw them using the following methods depending on the usage of an EBO
 
 Using an EBO
 ```kotlin
@@ -74,15 +77,15 @@ Shaders are C-like programs that are used in the OpenGL pipeline
 
 ![OpenGL Pipeline](https://open.gl/media/img/c2_pipeline.png)
 
-In the example code below, we can see a functional vertex shader. Important features of there programs include:
+In the example code below, we can see a functional vertex shader. Important features of their programs include:
 
 In & Out variables
 : For passing variables through the pipeline. (From one and into the next)
 
-Uniforms variables
-: Constant variables that are set programmatically before a run of the cycle and can be access by any shader.
+Uniform variables
+: Constant variables that are set programmatically before a run of the cycle and can be accessed by any shader.
 
-a float Uniform for example can be set with the following code
+A float Uniform, for example, can be set with the following code
 ```kotlin
 glUniform1f(getUniform(uniformName),value)
 ```
