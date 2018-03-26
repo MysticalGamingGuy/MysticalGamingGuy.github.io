@@ -11,8 +11,8 @@ Jan 26, 2018:
 Getting Started With OpenGL
 
 Mar 25, 2018:
-## [New Topic ](OpenGL2)
-New Ideas
+## [More Advanced OpenGL](OpenGL2)
+Learning the fundamentals and critical information about OpenGL
 
 
 
