@@ -48,53 +48,31 @@ Becuase this is a learning project, there are LED's hooked up to all the output
 
 another register was then build beside this one so that we have 2 saved value to either add or subtract.
 
-## Adder / Subtractor (Simple ALU)
+## Adder / Subtractor (Simplistic ALU)
 
 This module allows the CPU to add or subtract the values stored in the aforementioned registers. Here we see a simplistic binary addition of...
 
-00010000 + 00010000 = 00100000
+**00010000 + 00010000 = 00100000**
 
 and you can see the coresponding LED's lighting up on the board.
 
 ![Clock, Register A & B, ALU](https://lh3.googleusercontent.com/ripwOUh7UEvEuaxdGogsf2ULr2ywvPBm3oddXqD-ZXn5wLaPMI49BWMKSSMDaAcK0FKv4z5hb23IvSJArZd8-n4UNeKB6NeV6OyGYP8ybCpi2KGqs7yic3WWn7sYsaJoEIke3yuX9vbONIY0OPVI5kXhmrJlLY0eQiVNCjcQGlrRzSwe-uND6LT-OV9KXd7ER77THXmzMljo71uJ7TQ4AJ3xg8aAAdTS85wYOOrev3QC1uAQiI3ZWkwyoFUMO-acgeDrWhIgY40JtXrOFSglZzjBXOoZSvPnUZ3ujJDCyyFdzjH8xw4AlHydxFLAjz8ZwGKnF5iEd4Mtyj4BuQEEp2fw56MZNrz0Xx4Dv-QtSbJig39UbxiaFkRQjD7cveOLRWVa8T248r3LwDmKKzDhHh5nLLXdpwICzfgPNXA7483dMPgyRu3SnKc2rc0uAFtiuAI4ve695x7_e13Cl0Aa5tf37eTawGL6w52y0SEHlaZMI9pDGynj5O817D4ckmSlyMF5SNX0KpRTJsd_KDC9UAOdt6ZHmPhXHl1efOmCJpjX7YqJp9_hgFcnqWYIgpK-TA_Ev8Lzr8jo2L-ZgHoJv4ZxutwRQyeuPh5C9vCWNKLRMIm0wLSXV4vf0pDXHTlemgfYzxkBqNc-lMMDEgXOBEkLF0I3Sg6CB-G94YqJTBq3yZoxfDqbVKIOuZ0exIrkLdUq2gz6d_F3A_EWxg=w1213-h910-no)
 
+## Ram
 
-<link  href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.3.1/viewer.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.3.1/viewer.min.js"></script>
+the ram can really be through of as buch of registers that are access through a BCD (binary coded decimal). in this case we have 4 bits to get at our memory with. now with 4 bits, we can represent 2^4 = 16 differnt combinations. therefore we can assentially access 16 differnt register, each again with 8 bits stored in it.
 
-<div>
-<div>
-<img id="image" src="https://lh3.googleusercontent.com/7I9Riz_XdZ2irjiVkY0zfQaS5nMXGtdodYxFLLoICTfBjGF_nBs70YPNsmtzrQyBSBGEVfISGpk1-75uU4ElpR2yJaNMKKkNSGgegu4WPf4aCfH-T1ZuBV0jO3jmZW_XjQNaq1VvbDVFl_yC_pHj_6prbgMqoQGjXmDNA9Veb851IrhrN-xmrMS0YmiVPaXu4IEA0EIf5xHaB4pavNdM_QzTzg_8ji0NSKqy0blbOsmTTQgnkoVoZP2A1vQZtr-dcZ9qi-xg8QYzRV1UAGD00ds9ZqjsaPIMCTfCik4lvduWmaqEIKAgXAlhHv4ec72wmWxF_58iwTJ1OH9F6ksKA7GGNJKxDwJIZmlIQ8HpAVbGpa_YvULz6Rl_cwY-PEcIGk5-O7epqqKlAGNc2iZN9_1wGep_8v20r3aZcf80FateStDKRMmEGhOn83pTaHevwZxfzLnCC5mKhlOPnH9YE6MZagdZF-xvZxEkqWh99Dt5vBFuO7-nGnHh-25FQwOsAWFCgCOrwYrY2QzbMHyQi3SMlcPFDI9yovjQXbemZQfxWbmNf5GCl-N7qod06xQNN4F9A9uPuK8mNqSCLZG_VziX97AlXJQ-uP_e1xoxzvsNOQJgGfuYrMvhPxNkMvWVGzVoeuJJG6CvC2dYUySGgGt5o0hdcX68oL0HKXYDlpigXUgN6tLhEm8FWQMSpV8JaTxr3oyIxu_AKM9quQ=w1213-h910-no" alt="Picture">
-</div>
+here we can see 4 yellow lights in the bottom left all set to 0, so we are looking the contents of the first address in the LED's in the middle. which apear to be 10111111.
 
-<div>
-<ul id="images">
-    <li><img style="max-height:200px;max-width:200px;height:auto;width:auto" src="https://lh3.googleusercontent.com/7I9Riz_XdZ2irjiVkY0zfQaS5nMXGtdodYxFLLoICTfBjGF_nBs70YPNsmtzrQyBSBGEVfISGpk1-75uU4ElpR2yJaNMKKkNSGgegu4WPf4aCfH-T1ZuBV0jO3jmZW_XjQNaq1VvbDVFl_yC_pHj_6prbgMqoQGjXmDNA9Veb851IrhrN-xmrMS0YmiVPaXu4IEA0EIf5xHaB4pavNdM_QzTzg_8ji0NSKqy0blbOsmTTQgnkoVoZP2A1vQZtr-dcZ9qi-xg8QYzRV1UAGD00ds9ZqjsaPIMCTfCik4lvduWmaqEIKAgXAlhHv4ec72wmWxF_58iwTJ1OH9F6ksKA7GGNJKxDwJIZmlIQ8HpAVbGpa_YvULz6Rl_cwY-PEcIGk5-O7epqqKlAGNc2iZN9_1wGep_8v20r3aZcf80FateStDKRMmEGhOn83pTaHevwZxfzLnCC5mKhlOPnH9YE6MZagdZF-xvZxEkqWh99Dt5vBFuO7-nGnHh-25FQwOsAWFCgCOrwYrY2QzbMHyQi3SMlcPFDI9yovjQXbemZQfxWbmNf5GCl-N7qod06xQNN4F9A9uPuK8mNqSCLZG_VziX97AlXJQ-uP_e1xoxzvsNOQJgGfuYrMvhPxNkMvWVGzVoeuJJG6CvC2dYUySGgGt5o0hdcX68oL0HKXYDlpigXUgN6tLhEm8FWQMSpV8JaTxr3oyIxu_AKM9quQ=w1213-h910-no" alt="Picture 1"></li>
-    <li><img style="max-height:200px;max-width:200px;height:auto;width:auto" src="https://lh3.googleusercontent.com/Rw320Rs3HaDb9ZzhdT4gqTWQj9LMK6VO1w5SNDYe_mT-QMPi1ZSAnIIzq6R-q_QEuh7RD7mC9n-59RK3NaqioLNc6Mc455NATzsFDUDRn1irNS08PaOyMcnyAC3PY9Ot_kLTf-UhW8Lt1NQD_7aPcfzXmh2yODz99Kp0wC_31-U_QnbumPAoYsMOWwYkbuJ2OCNgqaxot5YoqmON98HF13OZE7c8N3oHw3Alrx9VWGIGSSEa0wKt6-mBfBhsmYrnc6lpMgj2drDNrTkT0RVuvxFAIFmMcrZAHhFfYxmMPFMe3GOM27AxN6GC7lSejpg3vGbGpuXwm97COXQpr761llTbRjBScWhgX-G2NkqmiIWlyQAnbg3jaMb59l8KcobmKZhfRF8Dkqx_A-UJYn_tu1SdXu6wKCpb0ECAIbmd1C_5itEpkluEvdxa3I4ULqnm5TZuIxlKWkaB7rgdz_9Y3Nfl-9qguaMntU7XIqiZCcZQ1feH4DcgQvkEaXfhWl6ZXMPHXaLhUrGec0DYCIwJRQx8G9ZQZ0_vNPDWo290wsyuEdTYcXBkn6alKUp8B38VTqA7EtCXwowXdQ4YGhsqTwYmZEvhQhvV8byqcNPaEoyUn58R0LPYli0coPw6vm8f9kcecFCe6APVeBFSjAZYZF-ZSviXDy1KFgCc4fbZ6ApZNXLkLngWyi9LxQ0OfYGlY34gsefC-3BDguWgrg=w1213-h910-no" alt="Picture 2"></li>
-    <li><img style="max-height:200px;max-width:200px;height:auto;width:auto" src="https://lh3.googleusercontent.com/Ib4T9L-fbzz4dDnAOP91IV-h9Z9Pk4fNYq_N5jndsbAob3MFItlb8-43WCcjan9uxNH3XZzsIE8ycX5nr4aEvqgl14ofyYQ7VFwhPuasaIbI85fQL_AU-I0lrn4QycuJ-zJyrzHAo01Oj96-vAOfOpM6TXmU8kKUcIihx2y9g0FrwZxkGdHkeHJGbH7iCQok_H2sjRGcvAW-_WoDv2zEaN236rsBIQnD1XfOevU3N6gTOvu8fz3-ImQbi9UVMw3gphEyu8LB8qth97i6tS-S0KHJcIGY5FDOUivz4vH55X6CpJ_RbvyXz2HNxt6VdIICR4Pu-mwrYzFgdNGWfJKl6H9Y5uhE2UfJ8JvkaSYgTfXuNdC29ViW0G3zSIcFx2Z_4Fclahc03aGs_-d3x7uU7t7qH_S5TMNIfFGXsiNmthDTUVtxJCpi7cbUagmiqvHiuMlOdXRUaVhE7jAddoiEwFvgxfR6nbpx58B1EDrzYaX36vdidZUYe5-8LMe_Oj1Y_G1Gadro5GQ9NZTlNya_dEAWll7uTLlX9VmKvCMJtDKYNr4EYI22P_KWlUBRfHu5M1AlwSdD8YadHROf6zvh_aQLOsN5uA6dzOTiCEFc2_PNDNiWUZzYhyChwkJoriLVIgCHGo3M8k1SvPTomOxXTa9XrXxQ2gGF12mTpCJNejGZu-DKkE5m19R01jFT8hREYYGdeVWNrgZeQjiCuw=w1213-h910-no" alt="Picture 3"></li>
-    <li><img style="max-height:200px;max-width:200px;height:auto;width:auto"  src="https://lh3.googleusercontent.com/0cHty5aQY1RxLHNExcYI9d7Yr57zagR91WE40pNburPPEvh4cnI46dWo8zmp9OvcgRnqEHS9ko6hye0Yo7A4ZZGMXyCpCDMrgL1cOIgHwA6B0l0ESxBPrSWDSyAy4OEtJ-sNGP8xDLe-qvJWJjtLAubPSipP3NH_ZCCTNahOFIhihvgVSTa8sgSeMfDoOYeLkgLXIVC2ClBTlM_ASg5LwTORJY3uPQIy1YUFMLOP8Bl4nuFxvdPkg7NocAfpAzTlK4vuyy4BQ45UCf4F7UViMCrrOyLGvSrkQzV3JQ7AB5kNfqDI_4aME4rVYX3l8dAEH7Qr_GGIziBQKxtexrW1sziIp-i7FjQ7x2NAHJkp55rBcXIWusxT3SH-dE8BnEcq8ORAnqpHYa0fittNWE07bKKm84XAadq_f3FApKX0LAILQMTdUmB3nz4gg7mwL5phs09056TajbVeeSSojAl1_huv4zuN_juvoBT0Ct0hv0LghV2WymtVZpXv-BLJHIF0PvmTLVHf3p-fLPuXBtNPGrHfhljXWWWajrzIzUPBe1k3_lJ2uJ6a6vtw5fSsi22BLwRtgt5oNF-7rNio-YOLwl_oEI-OYYgjvfUm7x92i0Uhygo6B-8YVPyymxGSqIrtuRYv4SqxyXttkv78KT2_nsPV0yagAwQWJL8Ka6Qhd5qLH1zbaeGyPXwHVYWvTM2skem_CKYmGHu7ybIVfw=w3036-h2276-no" alt="Picture 3"></li>
-</ul>
-</div>
-</div>
+![Clock, Register A & B, ALU](https://lh3.googleusercontent.com/JmXPffN3AD7-oE_Od0wg9GSlIas_TBwTtv8qHSbjZB_PJv6_HsVFqR-LKdJ_0noaEvwtXEPkKOOk62d1foDCZPQSQu2_E7IxGwKPKoNcAvDLDCQNpZ7MTfsqfhL5UeJQn5TyBTDNYQjzqCpKUXiPfb-kCAvl4DNWpKStWOlrJmaklUbYiSXRvSDS-0_gaeurtBzgMfhjRG7woES6MGf_jgAImGT_1cGjCImYB6jxnr0Rcmbxz8B2ithHobzNekCs8qG2gu9t4xe4J37CMoGU8FryZJ1rCsDEOH2g9_Dq3kpB9hkslCCBae5RiyuhN3ujGEnF5RwTclz-p2Q1JOZeSaBe5G-aPvrbm5mxT9S27rDLQ_8jWSd3EB85iX2kYJHTLUrWkQOg-iBeBpXCysqsxTTdLivfazp3zk7OZzupN8a3kBNceQnAbLh-2FrAKQxbHW8P0S_goml2nRxjDKJQ1PCWvj8hgDqhVKhbYs07fxL2iOcUAp8vA9r0yYeHdf-twW2mDKpsbRQpruweDdZv325i2-fMdVWKtqDzfMnZncfTvL5OgIA1sGx65bTK1xp7SMOB8iLCI1NjrTVMbY7GTyZPmltv-FDYh3x1WyGFl-mQXI2MN_U5GYaqNsSqQi5cOPVAySnNJS7w72vOz8oWb07D-V6s15fR9kQP1MWMi-Bdru0QOW1Z5zLe9mr-JVRaOIFVLKcCo5wY19doIw=w1213-h910-no)
 
-<script>
-// View an image
-const viewer = new Viewer(document.getElementById('image'), {
-  inline: false,
-  viewed() {
-    viewer.zoomTo(1);
-  },
-});
-
-// View a list of images
-const gallery = new Viewer(document.getElementById('images'));
-
-</script>
+[Here](https://photos.app.goo.gl/AfhpNrbUxU1DJwTZA) are some more photos that i took, they show some more in-between stages.
 
 ## Plans for the future
 
-programmer
-compiller
-PCB
-FPGA
+- finish
+- programmer
+- compiller
+- PCB
+- FPGA
 
