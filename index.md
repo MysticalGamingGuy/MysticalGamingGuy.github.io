@@ -10,7 +10,6 @@ Hello, My name is Ian Moody and Welcome to my blog. On here I will be diving int
 ## [Understanding & Setup with **OpenGL** on the **JVM** ](OpenGL1)
 Getting Started With OpenGL.
 
-
 ### Mar 25, 2018:
 ## [More Advanced OpenGL](OpenGL2)
 Learning the fundamentals and critical information about OpenGL.
@@ -18,6 +17,10 @@ Learning the fundamentals and critical information about OpenGL.
 ### Apr 2, 2018:
 ## [OpenGL Framework Construction](OpenGL3)
 Wrapping OpenGL functionalities with an easy to use platform suitable for future development.
+
+### Dec 18, 2018:
+## [8 Bit CPU](8BitCPU)
+Building an 8-bit CPU from scratch out of TTL logic IC's
 
 
 
