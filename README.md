@@ -1,3 +1,3 @@
-# The Lonely Tilde
+# The Golden Tilde
 my blog for posting about tech and things that interest me.
-http://thelonelytilde.tk
+http://TheGoldenTilde.ml
