@@ -59,6 +59,37 @@ and you can see the coresponding LED's lighting up on the board.
 ![Clock, Register A & B, ALU](https://lh3.googleusercontent.com/ripwOUh7UEvEuaxdGogsf2ULr2ywvPBm3oddXqD-ZXn5wLaPMI49BWMKSSMDaAcK0FKv4z5hb23IvSJArZd8-n4UNeKB6NeV6OyGYP8ybCpi2KGqs7yic3WWn7sYsaJoEIke3yuX9vbONIY0OPVI5kXhmrJlLY0eQiVNCjcQGlrRzSwe-uND6LT-OV9KXd7ER77THXmzMljo71uJ7TQ4AJ3xg8aAAdTS85wYOOrev3QC1uAQiI3ZWkwyoFUMO-acgeDrWhIgY40JtXrOFSglZzjBXOoZSvPnUZ3ujJDCyyFdzjH8xw4AlHydxFLAjz8ZwGKnF5iEd4Mtyj4BuQEEp2fw56MZNrz0Xx4Dv-QtSbJig39UbxiaFkRQjD7cveOLRWVa8T248r3LwDmKKzDhHh5nLLXdpwICzfgPNXA7483dMPgyRu3SnKc2rc0uAFtiuAI4ve695x7_e13Cl0Aa5tf37eTawGL6w52y0SEHlaZMI9pDGynj5O817D4ckmSlyMF5SNX0KpRTJsd_KDC9UAOdt6ZHmPhXHl1efOmCJpjX7YqJp9_hgFcnqWYIgpK-TA_Ev8Lzr8jo2L-ZgHoJv4ZxutwRQyeuPh5C9vCWNKLRMIm0wLSXV4vf0pDXHTlemgfYzxkBqNc-lMMDEgXOBEkLF0I3Sg6CB-G94YqJTBq3yZoxfDqbVKIOuZ0exIrkLdUq2gz6d_F3A_EWxg=w1213-h910-no)
 
 
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.3.1/viewer.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.3.1/viewer.min.js"></script>
+
+<div>
+<div>
+<img id="image" src="picture.jpg" alt="Picture">
+</div>
+
+<div>
+<ul id="images">
+    <li><img src="https://lh3.googleusercontent.com/ripwOUh7UEvEuaxdGogsf2ULr2ywvPBm3oddXqD-ZXn5wLaPMI49BWMKSSMDaAcK0FKv4z5hb23IvSJArZd8-n4UNeKB6NeV6OyGYP8ybCpi2KGqs7yic3WWn7sYsaJoEIke3yuX9vbONIY0OPVI5kXhmrJlLY0eQiVNCjcQGlrRzSwe-uND6LT-OV9KXd7ER77THXmzMljo71uJ7TQ4AJ3xg8aAAdTS85wYOOrev3QC1uAQiI3ZWkwyoFUMO-acgeDrWhIgY40JtXrOFSglZzjBXOoZSvPnUZ3ujJDCyyFdzjH8xw4AlHydxFLAjz8ZwGKnF5iEd4Mtyj4BuQEEp2fw56MZNrz0Xx4Dv-QtSbJig39UbxiaFkRQjD7cveOLRWVa8T248r3LwDmKKzDhHh5nLLXdpwICzfgPNXA7483dMPgyRu3SnKc2rc0uAFtiuAI4ve695x7_e13Cl0Aa5tf37eTawGL6w52y0SEHlaZMI9pDGynj5O817D4ckmSlyMF5SNX0KpRTJsd_KDC9UAOdt6ZHmPhXHl1efOmCJpjX7YqJp9_hgFcnqWYIgpK-TA_Ev8Lzr8jo2L-ZgHoJv4ZxutwRQyeuPh5C9vCWNKLRMIm0wLSXV4vf0pDXHTlemgfYzxkBqNc-lMMDEgXOBEkLF0I3Sg6CB-G94YqJTBq3yZoxfDqbVKIOuZ0exIrkLdUq2gz6d_F3A_EWxg=w1213-h910-no" alt="Picture 1"></li>
+    <li><img src="https://lh3.googleusercontent.com/ripwOUh7UEvEuaxdGogsf2ULr2ywvPBm3oddXqD-ZXn5wLaPMI49BWMKSSMDaAcK0FKv4z5hb23IvSJArZd8-n4UNeKB6NeV6OyGYP8ybCpi2KGqs7yic3WWn7sYsaJoEIke3yuX9vbONIY0OPVI5kXhmrJlLY0eQiVNCjcQGlrRzSwe-uND6LT-OV9KXd7ER77THXmzMljo71uJ7TQ4AJ3xg8aAAdTS85wYOOrev3QC1uAQiI3ZWkwyoFUMO-acgeDrWhIgY40JtXrOFSglZzjBXOoZSvPnUZ3ujJDCyyFdzjH8xw4AlHydxFLAjz8ZwGKnF5iEd4Mtyj4BuQEEp2fw56MZNrz0Xx4Dv-QtSbJig39UbxiaFkRQjD7cveOLRWVa8T248r3LwDmKKzDhHh5nLLXdpwICzfgPNXA7483dMPgyRu3SnKc2rc0uAFtiuAI4ve695x7_e13Cl0Aa5tf37eTawGL6w52y0SEHlaZMI9pDGynj5O817D4ckmSlyMF5SNX0KpRTJsd_KDC9UAOdt6ZHmPhXHl1efOmCJpjX7YqJp9_hgFcnqWYIgpK-TA_Ev8Lzr8jo2L-ZgHoJv4ZxutwRQyeuPh5C9vCWNKLRMIm0wLSXV4vf0pDXHTlemgfYzxkBqNc-lMMDEgXOBEkLF0I3Sg6CB-G94YqJTBq3yZoxfDqbVKIOuZ0exIrkLdUq2gz6d_F3A_EWxg=w1213-h910-no" alt="Picture 2"></li>
+    <li><img src="https://lh3.googleusercontent.com/ripwOUh7UEvEuaxdGogsf2ULr2ywvPBm3oddXqD-ZXn5wLaPMI49BWMKSSMDaAcK0FKv4z5hb23IvSJArZd8-n4UNeKB6NeV6OyGYP8ybCpi2KGqs7yic3WWn7sYsaJoEIke3yuX9vbONIY0OPVI5kXhmrJlLY0eQiVNCjcQGlrRzSwe-uND6LT-OV9KXd7ER77THXmzMljo71uJ7TQ4AJ3xg8aAAdTS85wYOOrev3QC1uAQiI3ZWkwyoFUMO-acgeDrWhIgY40JtXrOFSglZzjBXOoZSvPnUZ3ujJDCyyFdzjH8xw4AlHydxFLAjz8ZwGKnF5iEd4Mtyj4BuQEEp2fw56MZNrz0Xx4Dv-QtSbJig39UbxiaFkRQjD7cveOLRWVa8T248r3LwDmKKzDhHh5nLLXdpwICzfgPNXA7483dMPgyRu3SnKc2rc0uAFtiuAI4ve695x7_e13Cl0Aa5tf37eTawGL6w52y0SEHlaZMI9pDGynj5O817D4ckmSlyMF5SNX0KpRTJsd_KDC9UAOdt6ZHmPhXHl1efOmCJpjX7YqJp9_hgFcnqWYIgpK-TA_Ev8Lzr8jo2L-ZgHoJv4ZxutwRQyeuPh5C9vCWNKLRMIm0wLSXV4vf0pDXHTlemgfYzxkBqNc-lMMDEgXOBEkLF0I3Sg6CB-G94YqJTBq3yZoxfDqbVKIOuZ0exIrkLdUq2gz6d_F3A_EWxg=w1213-h910-no" alt="Picture 3"></li>
+</ul>
+</div>
+</div>
+
+<script>
+// View an image
+const viewer = new Viewer(document.getElementById('image'), {
+  inline: true,
+  viewed() {
+    viewer.zoomTo(1);
+  },
+});
+
+// View a list of images
+const gallery = new Viewer(document.getElementById('images'));
+
+</script>
+
 ## Plans for the future
 
 programmer
