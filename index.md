@@ -10,7 +10,7 @@ Hello, My name is Ian Moody and Welcome to my blog. On here I will be diving int
 
 ### Jan 31, 2019:
 ## [Stripe, Couch, and Functions Oh My](stripeCouchFunctions)
-Building an 8-bit CPU from scratch out of TTL logic IC's
+Integrating Stripe oauth for connect accounts with React Native, CouchDB, and Azure Functions
 
 ---
 
